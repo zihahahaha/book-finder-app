@@ -1,10 +1,14 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   imageLink?: string;
   title?: string;
   authors?: [string];
   publishedDate: string;
+  buyLink: string;
 }>();
+function handleBuy() {
+  window.open(props.buyLink, "_blank");
+}
 </script>
 
 <template>
@@ -18,7 +22,7 @@ defineProps<{
         <div>{{ authors?.join(", ") }}★{{ publishedDate }}</div>
       </n-gi>
       <n-gi :span="1">
-        <n-button>PREVIEW</n-button>
+        <n-button @click="handleBuy">BUY</n-button>
       </n-gi>
     </n-grid>
   </n-card>

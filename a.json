@@ -1,0 +1,111 @@
+{
+    "kind": "books#volume",
+    "id": "UvK1Slvkz3MC",
+    "etag": "4JWsnc1M8z8",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/UvK1Slvkz3MC",
+    "volumeInfo": {
+      "title": "The Girl Who Played with Fire",
+      "subtitle": "A Lisbeth Salander Novel",
+      "authors": [
+        "Stieg Larsson"
+      ],
+      "publisher": "Knopf Doubleday Publishing Group",
+      "publishedDate": "2009-07-28",
+      "description": "\u003cb\u003e\u003cb\u003e#1 NATIONAL BESTSELLER •\u003c/b\u003e Lisbeth Salander returns in the next installment of the Girl with the Dragon Tattoo series: Part blistering espionage thriller, part riveting police procedural, and part piercing exposé on social injustice, this is a “gripping, stay-up-all-night read” (\u003ci\u003eEntertainment Weekly\u003c/i\u003e). \u003cb\u003e• Also known as the Millennium series\u003c/b\u003e\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eThe next installment of the Millennium series: Mikael Blomkvist, crusading publisher of the magazine Millennium, has decided to run a story that will expose an extensive sex trafficking operation. On the eve of its publication, the two reporters responsible for the article are murdered, and the fingerprints found on the murder weapon belong to his friend, the troubled genius hacker Lisbeth Salander. Blomkvist, convinced of Salander’s innocence, plunges into an investigation. Meanwhile, Salander herself is drawn into a murderous game of cat and mouse, which forces her to face her dark past.\u003cbr\u003e\u003cbr\u003e\u003cb\u003eLook for the latest book in the Girl with the Dragon Tattoo series, \u003ci\u003eThe Girl in the Eagle's Talons\u003c/i\u003e, coming soon!\u003c/b\u003e",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "0307272303"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9780307272300"
+        }
+      ],
+      "readingModes": {
+        "text": true,
+        "image": true
+      },
+      "pageCount": 512,
+      "printedPageCount": 513,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction / Mystery & Detective / International Crime & Mystery",
+        "Fiction / Thrillers / Suspense",
+        "Fiction / Crime"
+      ],
+      "averageRating": 4,
+      "ratingsCount": 3374,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "2.22.14.0.preview.3",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=UvK1Slvkz3MC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73sav8iNV6zVEP4CPaXyVQ6M0c6fFeyeCSGDecVGCGLRodLZIQ0GMqFpjuL9asmWpZ8oQ2Br0AqHW8q9gN8p1OOQVgxlLx_TDsyg6T33MpKlkU_eWl5j550oLF0hdYK2v2byGtl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=UvK1Slvkz3MC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70rj-8nBfYJxv5WxRKOiFlEzlz9q7fqro3LxIyVQIQxif7wNW3LtVh1jzPFKUEzRWlbFVOpWGU81FmL2xaerYl1dmgEv3B8qC4EHDjmG-nc34Sn-LPRVig3OQpftKI0wUiQh_vd&source=gbs_api",
+        "small": "http://books.google.com/books/content?id=UvK1Slvkz3MC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE72wkyprnCGCDwbIIlIyk92FjOboOKIxzWz0nYEkt70kKD--usTGdKDbpo1hxI4g3LPoUTwPSNoJx8nBzMhZ7Yj_9jXFU1Zs51uVVnWlhTpiYPFKE4EMmg4IXzeH73egrZMnAaho&source=gbs_api",
+        "medium": "http://books.google.com/books/content?id=UvK1Slvkz3MC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72sIT3swxVy1PhwoOaRCOCPQ8wc2hKWWuV7Q38b88Y1wrW7ZsPyAzOurH-_-lc0PaJbQkB0fCritK1PH9-VRJitqvQQMRZs5A2Tui4Rgy8D3zMsc2SVCN3_Pjd25L1_Bpjw23tz&source=gbs_api",
+        "large": "http://books.google.com/books/content?id=UvK1Slvkz3MC&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE71lE4Q1S9CuDC0A7-Zno82hppB2fVGlHyozHDzuaSCtjgA755v9Xw3ExRtq7AIODCwTiHe-d0yyJGNaC_urg_aezGVkvzN8tuEpc_g20YTZqBUOTqtvVUPiOKdlsQAiAJyx1xZR&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.co.jp/books?id=UvK1Slvkz3MC&hl=&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=UvK1Slvkz3MC&source=gbs_api",
+      "canonicalVolumeLink": "https://play.google.com/store/books/details?id=UvK1Slvkz3MC"
+    },
+    "layerInfo": {
+      "layers": [
+        {
+          "layerId": "geo",
+          "volumeAnnotationsVersion": "20"
+        }
+      ]
+    },
+    "saleInfo": {
+      "country": "JP",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+        "amount": 1533,
+        "currencyCode": "JPY"
+      },
+      "retailPrice": {
+        "amount": 1380,
+        "currencyCode": "JPY"
+      },
+      "buyLink": "https://play.google.com/store/books/details?id=UvK1Slvkz3MC&rdid=book-UvK1Slvkz3MC&rdot=1&source=gbs_api",
+      "offers": [
+        {
+          "finskyOfferType": 1,
+          "listPrice": {
+            "amountInMicros": 1533000000,
+            "currencyCode": "JPY"
+          },
+          "retailPrice": {
+            "amountInMicros": 1380000000,
+            "currencyCode": "JPY"
+          }
+        }
+      ]
+    },
+    "accessInfo": {
+      "country": "JP",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.co.jp/books/download/The_Girl_Who_Played_with_Fire-sample-epub.acsm?id=UvK1Slvkz3MC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "pdf": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.co.jp/books/download/The_Girl_Who_Played_with_Fire-sample-pdf.acsm?id=UvK1Slvkz3MC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=UvK1Slvkz3MC&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  }

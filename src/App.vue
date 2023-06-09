@@ -1,19 +1,58 @@
 <script setup>
 import axios from "axios";
-import { ref, reactive, h } from "vue";
+import { ref, reactive, h, computed } from "vue";
 import { IosMenu } from "@vicons/ionicons4";
 import { NIcon } from "naive-ui";
 import BookItem from "./BookItem.vue";
+
+const placeholder = ref("please input");
+const input = ref("");
+const mode = ref("all");
+const searchKey = computed(() => {
+  if (mode.value === "title") {
+    return "intitle:" + input.value;
+  } else if (mode.value === "author") {
+    return "inauthor:" + input.value;
+  } else if (mode.value === "ibsn") {
+    return "ibsn" + input.value;
+  } else if (mode.value === "all") {
+    return input.value;
+  }
+});
 const options = reactive([
   {
-    label: "a",
-    key: "a",
+    label: "ALL",
+    key: "all",
+  },
+  {
+    label: "TITLE",
+    key: "title",
+  },
+  {
+    label: "AUTHOR",
+    key: "author",
+  },
+  {
+    label: "IBSN",
+    key: "ibsn",
   },
 ]);
 function renderIcon() {
   return h(NIcon, null, {
     default: () => h(IosMenu),
   });
+}
+function handleSelect(key) {
+  mode.value = key;
+  if (key === "title") {
+    placeholder.value = "please input title";
+  } else if (key === "author") {
+    placeholder.value = "please input author";
+  } else if (key === "ibsn") {
+    placeholder.value = "please input ibsn";
+  } else if ((key = "all")) {
+    placeholder.value = "please input";
+  }
 }
 
 const result = {
@@ -24,27 +63,42 @@ const result = {
 };
 const activeFlag = ref(false);
 
-async function search(url) {
+let controller;
+async function search() {
+  console.log(searchKey.value);
   activeFlag.value = true;
+  if (controller) controller.abort();
+  controller = new AbortController();
   result.items.value = [];
   result.cntIndex = 0;
   result.url =
-    "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes";
-  const { data } = await axios.get(result.url, {
-    params: {
-      startIndex: result.cntIndex,
-    },
-  });
-  console.log(`共${data.totalItems}条`);
-  result.totalItems = data.totalItems;
-  for (let i = 0; i < data.items.length; ++i) {
-    result.items.value.push((await axios.get(data.items[i].selfLink)).data);
+    "https://www.googleapis.com/books/v1/volumes?q=" + searchKey.value;
+  try {
+    const { data } = await axios.get(result.url, {
+      signal: controller.signal,
+      params: {
+        startIndex: result.cntIndex,
+      },
+    });
+    console.log(`共${data.totalItems}条`);
+    result.totalItems = data.totalItems;
+    for (let i = 0; i < data.items.length; ++i) {
+      result.items.value.push(
+        (await axios.get(data.items[i].selfLink, { signal: controller.signal }))
+          .data
+      );
+    }
+    result.cntIndex += data.items.length;
+
+    console.log(result.cntIndex);
+  } catch (error) {
+    console.log(error);
   }
-  result.cntIndex += data.items.length;
 }
 
 async function load() {
   const { data } = await axios.get(result.url, {
+    signal: controller.signal,
     params: {
       startIndex: result.cntIndex,
     },
@@ -81,10 +135,10 @@ window.addEventListener("scroll", () => {
 <template>
   <header :class="{ active: activeFlag }" :style="style">
     <n-input-group style="width: 500px">
-      <n-dropdown trigger="click" :options="options">
+      <n-dropdown trigger="click" :options="options" @select="handleSelect">
         <n-button color="#757575" :render-icon="renderIcon" />
       </n-dropdown>
-      <n-input />
+      <n-input :placeholder="placeholder" v-model:value="input" />
       <n-button color="#757575" @click="search()"> 搜索 </n-button>
     </n-input-group>
   </header>
@@ -95,6 +149,7 @@ window.addEventListener("scroll", () => {
       :title="i.volumeInfo.title"
       :authors="i.volumeInfo.authors"
       :published-date="i.volumeInfo.publishedDate"
+      :buy-link="i.saleInfo.buyLink"
     />
   </main>
 </template>
